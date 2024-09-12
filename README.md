@@ -1,6 +1,6 @@
 # ravencoin-webwallet
 
-Web wallet for Ravencoin!
+Web wallet for [Ravencoin](https://ravencoin.org/)!
 Permissionless, open source, non-custodial (your keys never leave your browser).
 
 ## How to build
