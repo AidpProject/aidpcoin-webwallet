@@ -1,10 +1,10 @@
-import RavencoinKey from "@ravenrebels/ravencoin-key";
+import AidpcoinKey from "@aidpproject/aidpcoin-key";
 import React, { FormEvent } from "react";
 import { LightModeToggle } from "./components/LightModeToggle";
 import { setMnemonic } from "./utils";
 
-//For bundler not to optimize/remove RavencoinKey
-console.log("RavencoinKey", !!RavencoinKey);
+//For bundler not to optimize/remove AidpcoinKey
+console.log("AidpcoinKey", !!AidpcoinKey);
 
 export function Login() {
   const [showWords, setShowWords] = React.useState(false);
@@ -23,7 +23,7 @@ export function Login() {
       return false;
     }
     if (element) {
-      element.value = RavencoinKey.generateMnemonic();
+      element.value = AidpcoinKey.generateMnemonic();
     }
     showDialog(
       "WARNING",
@@ -41,10 +41,10 @@ export function Login() {
     }
     const value = mnemonicInput.value.trim();
 
-    const isValid = RavencoinKey.isMnemonicValid(value);
+    const isValid = AidpcoinKey.isMnemonicValid(value);
 
     if (isValid === false) {
-      alert("Given input does not seem to be 12 valid words for a Ravencoin wallet");
+      alert("Given input does not seem to be 12 valid words for a Aidpcoin wallet");
       setMnemonic(value);
       window.location.reload();
     } else {

@@ -4,29 +4,29 @@ export interface INetworkInfo {
   getThumbnailURL: (arg: string) => string;
 }
 
-const ravencoinMainnet: INetworkInfo = {
-  displayName: "Ravencoin Mainnet",
+const aidpcoinMainnet: INetworkInfo = {
+  displayName: "Aidpcoin Mainnet",
   getTransactionURL: (id: string) => {
     return (
-      "https://rvn-explorer-mainnet.ting.finance/index.html?route=TRANSACTION&id=" +
+      "https://explorer.ai-depin.org/tx/" +
       id
     );
   },
   getThumbnailURL(assetName: string) {
     const baseURL =
-      "https://rvn-explorer-mainnet.ting.finance/thumbnail?assetName=";
+      "https://explorer.ai-depin.org/thumbnail?assetName=";
     return baseURL + encodeURIComponent(assetName);
   },
 };
 
-const ravencoinTestnet: INetworkInfo = {
-  displayName: "Ravencoin Testnet",
+const aidpcoinTestnet: INetworkInfo = {
+  displayName: "Aidpcoin Testnet",
   getThumbnailURL: (assetName) => {
-    const baseURL = "https://testnet.ting.finance/thumbnail?assetName=";
+    const baseURL = "https://explorer.ai-depin.org/thumbnail?assetName=";
     return baseURL + encodeURIComponent(assetName);
   },
   getTransactionURL: (id: string) => {
-    return "https://rvnt.cryptoscope.io/tx/?txid=" + id;
+    return "https://explorer.ai-depin.org/tx/" + id;
   },
 };
 
@@ -46,14 +46,14 @@ const evrmoreMainnet: INetworkInfo = {
 };
 
 export interface INetworks {
-  rvn: INetworkInfo;
-  "rvn-test": INetworkInfo;
+  aidp: INetworkInfo;
+  "aidp-test": INetworkInfo;
   evr: INetworkInfo;
 }
 
 const asdf: INetworks = {
-  rvn: ravencoinMainnet,
-  "rvn-test": ravencoinTestnet,
+  aidp: aidpcoinMainnet,
+  "aidp-test": aidpcoinTestnet,
   evr: evrmoreMainnet,
 };
 

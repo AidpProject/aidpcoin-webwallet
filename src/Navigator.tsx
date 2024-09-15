@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Routes } from "./Routes";
 import { LightModeToggle } from "./components/LightModeToggle";
-import { Wallet } from "@ravenrebels/ravencoin-jswallet";
+import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 import {
   IconHistory,
   IconHome,
@@ -36,7 +36,7 @@ export function Navigator({
           return false;
         }}
       >
-        <h5 className="rebel-headline">Rebel wallet</h5>
+        <h5 className="rebel-headline">AIDP Webwallet</h5>
       </a>
 
       {balance}

@@ -1,5 +1,5 @@
-import RavencoinWallet, { Wallet } from "@ravenrebels/ravencoin-jswallet";
-console.log("RavencoinWallet", !!RavencoinWallet);
+import AidpcoinWallet, { Wallet } from "@aidpproject/aidpcoin-jswallet";
+console.log("AidpcoinWallet", !!AidpcoinWallet);
 import React from "react";
 import { getMnemonic } from "./utils";
 import { createRoot } from "react-dom/client";
@@ -26,7 +26,7 @@ import { useReceiveAddress } from "./hooks/useReceiveAddress";
 let _mnemonic =
   "sight rate burger maid melody slogan attitude gas account sick awful hammer";
 
-type ChainType = "rvn" | "rvn-test" | "evr";
+type ChainType = "aidp" | "aidp-test" | "evr";
 
 const initMnemonic = getMnemonic();
 
@@ -57,11 +57,11 @@ function App() {
       return;
     }
     let minAmountOfAddresses = 50;
-    //Override network to rvn-test if present in query string (search)
+    //Override network to aidp-test if present in query string (search)
     const searchParams = new URLSearchParams(window.location.search);
-    let network: ChainType = "rvn";
-    if (searchParams.get("network") === "rvn-test") {
-      network = "rvn-test";
+    let network: ChainType = "aidp";
+    if (searchParams.get("network") === "aidp-test") {
+      network = "aidp-test";
     }
 
     if (searchParams.get("network") === "evr") {
@@ -75,7 +75,7 @@ function App() {
       }
     }
 
-    RavencoinWallet.createInstance({
+    AidpcoinWallet.createInstance({
       minAmountOfAddresses,
       mnemonic,
       network,

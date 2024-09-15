@@ -1,5 +1,5 @@
 import React from "react";
-import * as RavencoinMessage from "@ravenrebels/ravencoin-message";
+import * as RavencoinMessage from "@aidpproject/aidpcoin-message";
 import { IAddressObject } from "./IAddressObject";
 
 export function useSignature(addressObject: IAddressObject | null, text: string) {
@@ -11,7 +11,7 @@ export function useSignature(addressObject: IAddressObject | null, text: string)
       if (!privateKey || !text) {
         setSignature("");
       } else {
-        const s = RavencoinMessage.sign(text, privateKey);
+        const s = AidpcoinMessage.sign(text, privateKey);
         setSignature(s);
       }
     }

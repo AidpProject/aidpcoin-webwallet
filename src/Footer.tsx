@@ -4,12 +4,12 @@ export function Footer({ signOut, mnemonic }) {
   return (
     <article>
       <p>
-        Brought to you by{" "}
-        <a href="https://twitter.com/RavenRebels" target="_blank">
-          Raven Rebels
+        AIDP Official Webwallet{" "}
+        <a href="https://www.ai-depin.org/" target="_blank">
+          Website
         </a>
       </p>
-      <a href="https://github.com/ravenrebels/ravencoin-webwallet">
+      <a href="https://github.com/aidpproject/aidpcoin-webwallet">
         Open source on GitHub
       </a>
       <br />

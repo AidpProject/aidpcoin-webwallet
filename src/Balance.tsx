@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Wallet } from "@ravenrebels/ravencoin-jswallet";
+import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 import { getAssetBalanceFromMempool } from "./utils";
 
 export function Balance({
@@ -59,12 +59,12 @@ function useUSDPrice(wallet: Wallet) {
   const [price, setPrice] = React.useState(0);
 
   React.useEffect(() => {
-    const isRavencoin = wallet && wallet.baseCurrency === "RVN";
+    const isAidpcoin = wallet && wallet.baseCurrency === "AIDP";
     const isEvrmorecoin = wallet && wallet.baseCurrency === "EVR";
     const work = () => {
-      if (isRavencoin === true) {
+      if (isAidpcoin === true) {
         const URL =
-          "https://api1.binance.com/api/v3/ticker/price?symbol=RVNUSDT";
+          "https://api.xeggex.com/api/v2/ticker/AIDP_USDT";
         fetch(URL)
           .then((response) => response.json())
           .then((obj) => {

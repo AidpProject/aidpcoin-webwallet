@@ -1,4 +1,4 @@
-import { Wallet } from "@ravenrebels/ravencoin-jswallet";
+import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 import React from "react";
 
 export function useReceiveAddress(wallet: Wallet | null, blockCount: number) {

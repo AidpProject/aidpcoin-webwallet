@@ -1,7 +1,7 @@
 import React from "react";
-import { Wallet } from "@ravenrebels/ravencoin-jswallet";
+import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 //@ts-ignore
-import logo from "../ravencoin-rvn-logo.png";
+import logo from "../aidpcoin-aidp-logo.png";
 //@ts-ignore
 import evrLogo from "../evrmorecoin-evr-logo.png";
 import networkInfo from "./networkInfo";
@@ -33,7 +33,7 @@ export function AssetLink({ wallet, assetName }: LinkToIPFSProps) {
     }
   }, [assetName]);
 
-  if (assetName === wallet.baseCurrency && wallet.baseCurrency === "RVN") {
+  if (assetName === wallet.baseCurrency && wallet.baseCurrency === "AIDP") {
     return (
       <div>
         <img style={imageStyle} src={logo}></img>
@@ -74,7 +74,7 @@ export function AssetLink({ wallet, assetName }: LinkToIPFSProps) {
     <div>
       <img
         style={imageStyle}
-        src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png"
+        src="placeholder-image.png"
       ></img>
     </div>
   );

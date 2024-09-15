@@ -1,13 +1,13 @@
-# ravencoin-webwallet
+# aidpcoin-webwallet
 
-Web wallet for Ravencoin!
+Web wallet for Aidpcoin!
 Permissionless, open source, non-custodial (your keys never leave your browser).
 
 ## How to build
 
 ### Clone the repo
 
-`git clone https://github.com/ravenrebels/ravencoin-webwallet.git`
+`git clone https://github.com/aidpproject/aidpcoin-webwallet.git`
 
 ### Install dependencies
 
@@ -31,6 +31,6 @@ Now the ./dist folder contains the web "site", you can FTP the files to your web
 
 ### Experimental features
 
-To use TESTNET instead of MAINNET for Ravencoin, append `?network=rvn-test` to the URL.
+To use TESTNET instead of MAINNET for Aidpcoin, append `?network=aidp-test` to the URL.
 
 Note: asset thumbnails only work on mainnet.

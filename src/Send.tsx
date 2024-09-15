@@ -1,5 +1,5 @@
 import React from "react";
-import { Wallet } from "@ravenrebels/ravencoin-jswallet";
+import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 import { IAsset } from "./Types";
 import { QrReader } from "react-qr-reader";
 import {
@@ -162,7 +162,7 @@ interface IAssetOptionsProps {
 function AssetOptions({ wallet, allAssets }: IAssetOptionsProps) {
   const options = Object.keys(allAssets).map((assetName: string) => {
     const balance = allAssets[assetName];
-    //Ignore base currency, such as RVN
+    //Ignore base currency, such as AIDP
     if (wallet.baseCurrency === assetName) {
       return null;
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Wallet } from "@ravenrebels/ravencoin-jswallet";
+import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 import { getAssetBalanceIncludingMempool } from "./utils";
 import { AssetName } from "./AssetName";
 
