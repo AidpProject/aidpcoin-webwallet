@@ -1,6 +1,6 @@
 {
   "name": "aidpcoin-webwallet",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "Web wallet for Aidpcoin",
   "private": true,
   "scripts": {
@@ -19,8 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "@aidpproject/aidpcoin-history-list": "^1.2.9",
-    "@aidpproject/aidpcoin-jswallet": "^0.10.4",
-    "@aidpproject/aidpcoin-key": "^2.8.4",
+    "@aidpproject/aidpcoin-jswallet": "^0.10.9",
+    "@aidpproject/aidpcoin-key": "^2.8.6",
     "@aidpproject/aidpcoin-message": "^0.7.5",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",

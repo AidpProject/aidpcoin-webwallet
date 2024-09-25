@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Routes } from "./Routes";
+import logo from './aidepin-purple256.png';
 import { LightModeToggle } from "./components/LightModeToggle";
 import { Wallet } from "@aidpproject/aidpcoin-jswallet";
 import {
@@ -27,17 +28,10 @@ export function Navigator({
   return (
     <article className="rebel-navigator__container">
       <LightModeToggle />
-      <a
-        href="#"
-        className="primary"
-        onClick={(event) => {
-          setRoute(Routes.HOME);
-          event.preventDefault();
-          return false;
-        }}
-      >
-        <h5 className="rebel-headline">AIDP Webwallet</h5>
-      </a>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <img src={logo} alt="Logo AIDP" style={{ width: '80px', marginRight: '10px', marginTop: '-15px' }} />
+      <h5>AIDP Webwallet</h5>
+    </div>
 
       {balance}
 
@@ -82,9 +76,7 @@ export function Navigator({
           />
         </ul>
       </nav>
-      <small>
-        <NetworkSelect wallet={wallet} networks={networkInfo}></NetworkSelect>
-      </small>
+
     </article>
   );
 }

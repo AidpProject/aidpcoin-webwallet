@@ -305,12 +305,12 @@ nav details.dropdown summary:focus-visible {
   --pico-text-selection-color: rgba(2, 154, 232, 0.25);
   --pico-muted-color: #646b79;
   --pico-muted-border-color: #e7eaf0;
-  --pico-primary: #0172ad;
-  --pico-primary-background: #0172ad;
+  --pico-primary: #8a0f95;
+  --pico-primary-background: #8a0f95;
   --pico-primary-border: var(--pico-primary-background);
   --pico-primary-underline: rgba(1, 114, 173, 0.5);
   --pico-primary-hover: #015887;
-  --pico-primary-hover-background: #02659a;
+  --pico-primary-hover-background: #6414b5;
   --pico-primary-hover-border: var(--pico-primary-hover-background);
   --pico-primary-hover-underline: var(--pico-primary-hover);
   --pico-primary-focus: rgba(2, 154, 232, 0.5);
@@ -446,7 +446,7 @@ nav details.dropdown summary:focus-visible {
     --pico-muted-color: #7b8495;
     --pico-muted-border-color: #202632;
     --pico-primary: #01aaff;
-    --pico-primary-background: #0172ad;
+    --pico-primary-background: #8a0f95;
     --pico-primary-border: var(--pico-primary-background);
     --pico-primary-underline: rgba(1, 170, 255, 0.5);
     --pico-primary-hover: #79c0ff;
@@ -591,7 +591,7 @@ nav details.dropdown summary:focus-visible {
   --pico-muted-color: #7b8495;
   --pico-muted-border-color: #202632;
   --pico-primary: #01aaff;
-  --pico-primary-background: #0172ad;
+  --pico-primary-background: #8a0f95;
   --pico-primary-border: var(--pico-primary-background);
   --pico-primary-underline: rgba(1, 170, 255, 0.5);
   --pico-primary-hover: #79c0ff;
@@ -808,7 +808,7 @@ body > main {
 }
 @media (min-width: 1536px) {
   .container {
-    max-width: 1450px;
+    max-width: 1280px;
   }
 }
 section {

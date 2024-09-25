@@ -116,9 +116,7 @@ function App() {
         )}
 
         <div className="rebel-content-container__content">
-          {currentRoute === Routes.HOME && (
-            <Assets wallet={wallet} assets={assets} mempool={mempool} />
-          )}
+
           {currentRoute === Routes.RECEIVE && (
             <ReceiveAddress receiveAddress={receiveAddress} />
           )}

@@ -1,20 +1,34 @@
 import React from "react";
-
+import logoX from './icons/x.png';
+import logoCoingecko from './icons/coingecko.png';
+import logoDiscord from './icons/discord.png';
+import logoTradeogre from './icons/tradeogre.png';
+import logoWebsite from './icons/website.png';
+import logoXeggex from './icons/xeggex.png';
 export function Footer({ signOut, mnemonic }) {
   return (
     <article>
-      <p>
-        AIDP Official Webwallet{" "}
-        <a href="https://www.ai-depin.org/" target="_blank">
-          Website
-        </a>
-      </p>
-      <a href="https://github.com/aidpproject/aidpcoin-webwallet">
-        Open source on GitHub
-      </a>
-      <br />
-      Icons from{" "}
-      <a href="https://feathericons.com/">https://feathericons.com/</a>
+    <div className="logo-container">
+    <a href="https://www.ai-depin.org" target="_blank" rel="noopener noreferrer">
+        <img src={logoWebsite} alt="Logo" className="logo" />
+    </a>
+    <a href="https://twitter.com/AIDePIN_org" target="_blank" rel="noopener noreferrer">
+        <img src={logoX} alt="Logo" className="logo" />
+    </a>
+        <a href="https://discord.gg/3HCqPzSsuZ" target="_blank" rel="noopener noreferrer">
+        <img src={logoDiscord} alt="Logo" className="logo" />
+    </a>
+    <a href="https://xeggex.com/market/AIDP_USDT" target="_blank" rel="noopener noreferrer">
+        <img src={logoXeggex} alt="Logo" className="logo" />
+    </a>
+    <a href="https://tradeogre.com/exchange/AIDP-USDT" target="_blank" rel="noopener noreferrer">
+        <img src={logoTradeogre} alt="Logo" className="logo" />
+    </a>
+    <a href="https://www.coingecko.com/en/coins/ai-depin" target="_blank" rel="noopener noreferrer">
+        <img src={logoCoingecko} alt="Logo" className="logo" />
+    </a>
+    </div>
+     
       <footer>
         <div className="grid">
           <button onClick={signOut}>Sign out</button>

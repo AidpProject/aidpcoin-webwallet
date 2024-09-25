@@ -23,7 +23,10 @@ body {
   */
   /* background: linear-gradient(112.1deg, #2e3e80.4%, #f15b22 70.2%); */
   background-color: #000;
-  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+ /* background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%); */
+ background-image: url('peakpx.jpg');
+ background-size: cover;
+ background-attachment: fixed;
 }
 /*
 :root {
@@ -46,7 +49,7 @@ body {
   If dark mode, change article background color
 */
 [data-theme="dark"] article {
-  background-color: black;
+  background-color: #1a1818;
 }
 
 /*
@@ -58,6 +61,42 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.logo-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 colonnes fixes */
+  gap: 10px; /* Espacement entre les logos */
+  justify-items: center; /* Centre les logos dans leurs cellules */
+  margin: 20px 0; /* Espacement autour des logos */
+}
+
+.logo {
+  max-width: 120px; /* S'assure que les logos ne dépassent pas leur conteneur */
+  height: auto; /* Maintient les proportions */
+  border-radius:10px;
+}
+
+/* Optionnel: Styles spécifiques pour les écrans plus petits */
+@media (max-width: 1024px) {
+  .logo-container {
+    grid-template-columns: repeat(6, 1fr); /* Toujours 3 colonnes */
+  }
+  
+  .logo {
+    width: 80px; /* Ajustez la taille des logos pour les petits écrans */
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    grid-template-columns: repeat(3, 1fr); /* Toujours 3 colonnes */
+  }
+  
+  .logo {
+    width: 80px; /* Ajustez la taille des logos pour les petits écrans */
+  }
+}
+
 
 @font-face {
   font-family: Quicksand;
@@ -133,7 +172,7 @@ body {
   color: white;
 }
 .rebel-balance {
-  font-weight: 200;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 0;
 }
@@ -143,12 +182,12 @@ body {
 }
 .rebel-balance__dollar-value {
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 500;
   display: inline-block;
 }
 .rebel-balance__base-currency-value {
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 500;
   display: inline-block;
 
   margin-left: 30px;

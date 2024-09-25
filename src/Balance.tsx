@@ -22,13 +22,13 @@ export function Balance({
     currency: "USD",
   });
   const balanceText = _balance.toLocaleString(undefined, {
-    minimumFractionDigits: 2,
+    minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   });
   const unitPriceText = price?.toLocaleString("en-US", {
     style: "currency",
     currency: "USD",
-    minimumFractionDigits: 3, // Adjust the number of decimal places
+    minimumFractionDigits: 5, // Adjust the number of decimal places
     maximumFractionDigits: 6, // You can adjust this as needed
   });
   return (
@@ -68,7 +68,7 @@ function useUSDPrice(wallet: Wallet) {
         fetch(URL)
           .then((response) => response.json())
           .then((obj) => {
-            setPrice(parseFloat(obj.price));
+            setPrice(parseFloat(obj.last_price));
           });
       }
 
